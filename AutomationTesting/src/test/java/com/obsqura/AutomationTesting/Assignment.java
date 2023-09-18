@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public class Assignment extends Base {
 
-	public void webLocators() {
+	public void locators() {
 
 		// id
 
@@ -15,9 +15,6 @@ public class Assignment extends Base {
 		WebElement enterValueB = driver.findElement(By.id("value-b"));
 		WebElement getTotal = driver.findElement(By.id("button-two"));
 		WebElement total = driver.findElement(By.id("message-two"));
-	}
-
-	public void webLocatorAmazon() {
 
 		driver.navigate().to("https://www.amazon.in/");
 
@@ -60,8 +57,7 @@ public class Assignment extends Base {
 		
 		Assignment assignment = new Assignment();
 		assignment.initializeBrowser();
-		assignment.webLocators();
-		assignment.webLocatorAmazon();
+		assignment.locators();
 		assignment.driverClose();
 	}
 
