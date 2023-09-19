@@ -18,15 +18,13 @@ public class Assignment extends Base {
 
 		driver.navigate().to("https://www.amazon.in/");
 
-		// id
-
 		WebElement orders = driver.findElement(By.id("nav-orders"));
 		WebElement search = driver.findElement(By.id("twotabsearchtextbox"));
 		WebElement address = driver.findElement(By.id("nav-global-location-popover-link"));
 		WebElement signin = driver.findElement(By.id("nav-link-accountList"));
 		WebElement addToCart = driver.findElement(By.id("nav-cart"));
 		
-		//CSS Selector - tagName#id
+		//cssSelector - tagName#id
 		
 		WebElement cartCSSSelector = driver.findElement(By.cssSelector("a#nav-cart"));
 		WebElement ordersCSSSelector = driver.findElement(By.cssSelector("a#nav-orders"));
@@ -34,13 +32,13 @@ public class Assignment extends Base {
 		
 		driver.navigate().to("https://www.ajio.com/");
 		
-		//CSS Selector - tagName.className
+		//cssSelector - tagName.className
 		
 		WebElement visitAjioluxe = driver.findElement(By.cssSelector("li.visit-ajio"));
 		WebElement cart = driver.findElement(By.cssSelector("div.ic-cart "));
 		WebElement searchButton = driver.findElement(By.cssSelector("span.ic-search"));
 		
-		//CSS Selector - tagName[attribute=value]
+		//cssSelector - tagName[attribute=value]
 		
 	    WebElement men = driver.findElement(By.cssSelector("a[title=MEN]"));
 		WebElement searchBar = driver.findElement(By.cssSelector("input[name=searchVal"));
@@ -51,6 +49,52 @@ public class Assignment extends Base {
 		WebElement visitAjioluxeByClassName = driver.findElement(By.className("visit-ajio"));
 		WebElement searchByClassName = driver.findElement(By.className("ic-search"));
 		WebElement headerRight = driver.findElement(By.className("header-right"));
+		
+		driver.navigate().to("https://demo.guru99.com/test/selenium-xpath.html");
+		
+		//name
+		
+		WebElement userid = driver.findElement(By.name("uid"));
+		WebElement password = driver.findElement(By.name("password"));
+		WebElement login = driver.findElement(By.name("btnLogin"));
+		WebElement reset = driver.findElement(By.name("btnReset"));
+		WebElement guru99Bank = driver.findElement(By.name("frmLogin"));
+		
+		driver.navigate().back();
+		driver.navigate().back();
+		driver.navigate().back();
+		
+		//linkText
+		
+		WebElement simpleFormDemo = driver.findElement(By.linkText("Simple Form Demo"));
+		WebElement checkboxDemo = driver.findElement(By.linkText("Checkbox Demo"));
+		WebElement radioButtonsDemo = driver.findElement(By.linkText("Radio Buttons Demo"));
+		
+		//partialLinkText
+		
+		WebElement selectInput = driver.findElement(By.partialLinkText("Select"));
+		WebElement formSubmit = driver.findElement(By.partialLinkText("Form"));
+		WebElement jquery = driver.findElement(By.partialLinkText("Jquery"));
+		
+		driver.navigate().forward();
+		
+		//xpath
+		
+		WebElement logoxpath = driver.findElement(By.xpath("//a[@id='nav-logo-sprites']"));
+		WebElement addressxpath = driver.findElement(By.xpath("//div[@id='nav-global-location-slot']"));
+		WebElement allxpath = driver.findElement(By.xpath("//a[@id='nav-hamburger-menu']"));
+		WebElement searchSubmitxpath = driver.findElement(By.xpath("//input[@type='submit']"));
+		WebElement toolBar = driver.findElement(By.xpath("//div[@class='layoutToolbarPadding']"));
+		
+		driver.navigate().forward();
+		
+		//xpath - contains()
+		
+		WebElement visitAjio = driver.findElement(By.xpath("//li[contains(@class,'visit')]"));
+		WebElement cartxpath = driver.findElement(By.xpath("//div[contains(@class,'-cart')]"));
+		WebElement homeAndKitchen = driver.findElement(By.xpath("//a[contains(@title,'KITCHEN')]"));
+		WebElement searchxpath = driver.findElement(By.xpath("//input[contains(@placeholder,'Search')]"));
+		WebElement menu = driver.findElement(By.xpath("//div[contains(@class,'newlist')]"));
 	}
 
 	public static void main(String[] args) {
