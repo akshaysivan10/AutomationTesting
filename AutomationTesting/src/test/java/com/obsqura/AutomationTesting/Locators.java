@@ -23,6 +23,13 @@ public class Locators extends Base{
 		WebElement checkbox = driver.findElement(By.partialLinkText("Checkbox"));
 		//xPath
 		WebElement showMessage = driver.findElement(By.xpath("//button[@id='button-one']"));
+		//xpath - starts-with
+		WebElement checkBox = driver.findElement(By.xpath("//a[starts-with(@href,'check-box')]"));
+		//xpath - text()
+		WebElement showMessagexpath = driver.findElement(By.xpath("//button[text()='Show Message']"));
+		//xpath - OR and AND
+		WebElement selectInput = driver.findElement(By.xpath("//a[text()='Select Input' and @href='select-input.php']"));
+		WebElement showMsg = driver.findElement(By.xpath("//button[text()='Show Message' or @id='button-one']"));
 	}
 	
 

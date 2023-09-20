@@ -95,6 +95,40 @@ public class Assignment extends Base {
 		WebElement homeAndKitchen = driver.findElement(By.xpath("//a[contains(@title,'KITCHEN')]"));
 		WebElement searchxpath = driver.findElement(By.xpath("//input[contains(@placeholder,'Search')]"));
 		WebElement menu = driver.findElement(By.xpath("//div[contains(@class,'newlist')]"));
+		
+		driver.navigate().forward();
+		
+		//xpath - starts-with
+		
+		WebElement heading = driver.findElement(By.xpath("//h1[starts-with(@class,'thick')]"));
+		WebElement mobileTesting = driver.findElement(By.xpath("//a[starts-with(@title,'Mobile')]"));
+		WebElement cucumberTesting = driver.findElement(By.xpath("//a[starts-with(@title,'Cucumber')]"));
+		WebElement agileTesting = driver.findElement(By.xpath("//a[starts-with(@title,'Agile')]"));
+		WebElement ETLTesting = driver.findElement(By.xpath("//a[starts-with(@title,'ETL')]"));
+		
+		//xpath - text()
+		
+		WebElement bigData = driver.findElement(By.xpath("//a[text()='BigData']"));
+		WebElement HBase = driver.findElement(By.xpath("//a[text()='HBase']"));
+		WebElement mongoDB = driver.findElement(By.xpath("//a[text()='MongoDB']"));
+		WebElement hive = driver.findElement(By.xpath("//a[text()='Hive']"));
+		WebElement cassandra = driver.findElement(By.xpath("//a[text()='Cassandra']"));
+		
+		//xpath - AND
+		
+		WebElement userIdxpath = driver.findElement(By.xpath("//input[@type='text' and @name='uid']"));
+		WebElement passwordxpath = driver.findElement(By.xpath("//input[contains(@onkeyup,'validate') and @name='password']"));
+		WebElement loginxpath = driver.findElement(By.xpath("//input[starts-with(@name,'btn') and @type='submit']"));
+		WebElement resetxpath = driver.findElement(By.xpath("//input[@type='reset' and @value='RESET']"));
+		WebElement guru99Bankxpath = driver.findElement(By.xpath("//h2[text()='Guru99 Bank' and @class='barone']"));
+		
+		//xpath - OR
+		
+		WebElement liveTestingProject = driver.findElement(By.xpath("//a[contains(@title,'nil') or @href='/live-testing-project.html']"));
+		WebElement liveSeleniumProject = driver.findElement(By.xpath("//a[text()='Live Selenium Project' or @href='/live-selenium-project.html']"));
+		WebElement guru99Logo = driver.findElement(By.xpath("//img[starts-with(@alt,'Guru99') or role='presentation']"));
+		WebElement tutorialsLibrary = driver.findElement(By.xpath("//h1[text()='Tutorials Library' or @class='thick-heading']"));
+		WebElement navBar = driver.findElement(By.xpath("//nav[@role='navigation' or contains(@class,'nav')]"));
 	}
 
 	public static void main(String[] args) {
