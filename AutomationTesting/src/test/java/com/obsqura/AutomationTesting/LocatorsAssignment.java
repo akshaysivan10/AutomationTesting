@@ -3,7 +3,7 @@ package com.obsqura.AutomationTesting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Assignment extends Base {
+public class LocatorsAssignment extends Base {
 
 	public void locators() {
 
@@ -129,11 +129,53 @@ public class Assignment extends Base {
 		WebElement guru99Logo = driver.findElement(By.xpath("//img[starts-with(@alt,'Guru99') or role='presentation']"));
 		WebElement tutorialsLibrary = driver.findElement(By.xpath("//h1[text()='Tutorials Library' or @class='thick-heading']"));
 		WebElement navBar = driver.findElement(By.xpath("//nav[@role='navigation' or contains(@class,'nav')]"));
+		
+		//xpath - parent
+		
+		WebElement python = driver.findElement(By.xpath("//a[@href='/python-tutorials.html']//parent::div[@class='canvas-middle']"));
+		WebElement java = driver.findElement(By.xpath("//a[@href='/java-tutorial.html']//parent::div[@class='canvas-middle']"));
+		WebElement ethicalHacking = driver.findElement(By.xpath("//a[@href='/ethical-hacking-tutorials.html']//parent::div[@class='canvas-middle']"));
+		
+		//xpath - child
+		
+		WebElement javaWeb = driver.findElement(By.xpath("//li[@style='width:100%;']//child::a[@href='/java-tutorial.html']"));
+		WebElement pythonWeb = driver.findElement(By.xpath("//li[@style='width:100%;']//child::a[@href='/python-tutorials.html']"));
+		WebElement hpalm = driver.findElement(By.xpath("//li[@style='width:100%;']//child::a[@href='/hp-alm-free-tutorial.html']"));
+		
+		//xpath - following
+		
+		WebElement excelTutorial = driver.findElement(By.xpath("//ul[@class='menu']//following::a[starts-with(@title,'Excel')]"));
+		WebElement junit = driver.findElement(By.xpath("//div[@class='col-md-3']//following::a[text()='JUnit']"));
+		WebElement selenium = driver.findElement(By.xpath("//ul[@id='java_technologies']//following::a[@title='Selenium']"));
+		
+		//xpath - preceding
+		
+		WebElement soapUI = driver.findElement(By.xpath("//a[starts-with(@title,'Agile')]//preceding::a[text()='SoapUI']"));
+		WebElement performanceTesting = driver.findElement(By.xpath("//a[@href='/jmeter-tutorials.html']//preceding::b[text()='Performance Testing']"));
+		WebElement sapmm = driver.findElement(By.xpath("//a[starts-with(@title,'SAP')]//preceding::a[text()='SAP MM']"));
+		
+		//xpath - ancestor
+		
+		WebElement guru99BankLoginModule = driver.findElement(By.xpath("//input[@name='uid']//ancestor::form[@name='frmLogin']"));
+		WebElement courseSection = driver.findElement(By.xpath("//div[@class='canvas-middle']//ancestor::section[@id='g-utility']"));
+		WebElement topBanner = driver.findElement(By.xpath("//td[@style='text-align:center;']//ancestor::div[contains(@class,'top-banner')]"));
+		
+		//xpath - descendant
+		
+		WebElement bigDataCourse = driver.findElement(By.xpath("//div[@class='g-grid']//descendant::a[text()='Big Data']"));
+		WebElement linuxCourse = driver.findElement(By.xpath("//div[@class='g-container']//descendant::a[text()='Linux']"));
+		WebElement informatica = driver.findElement(By.xpath("//section[@id='g-utility']//descendant::a[text()='Informatica']"));
+		
+		//xpath - following-sibling
+		
+		WebElement useridText = driver.findElement(By.xpath("//input[@name='uid']//following-sibling::label"));
+		WebElement passwordText = driver.findElement(By.xpath("//input[@type='password']//following-sibling::label"));
+		WebElement resetButton = driver.findElement(By.xpath("//input[@value='LOGIN']//following-sibling::input"));
 	}
 
 	public static void main(String[] args) {
 		
-		Assignment assignment = new Assignment();
+		LocatorsAssignment assignment = new LocatorsAssignment();
 		assignment.initializeBrowser();
 		assignment.locators();
 		assignment.driverClose();
